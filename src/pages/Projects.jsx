@@ -32,7 +32,7 @@ const Projects = () => {
       title: 'Chat App',
       description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB featuring user authentication, payment integration, and inventory management.',
       tech: ['React', 'Node.js', 'MongoDB', 'Express.js'],
-      image: '../images/chatapp.png',
+      image: 'https://via.placeholder.com/400x250?text=Social+App&bg=1a1a2e&color=ffffff',
       category: 'Full Stack'
     },
     {
