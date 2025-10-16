@@ -19,17 +19,17 @@ const Home = ({ isLoaded, scrollToSection }) => {
         <div className="grid lg:grid-cols-2 gap-4 md:text-left lg:text-left text-center items-center w-full">
           <div className="space-y-8 max-w-full mt-32 md:mt-4 lg:mt-4">
             <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
-              <h2 className="text-4xl md:ml-16 ml-0 lg:ml-16 font-bold text-white mb-6 break-words">Hello<span className='text-[#ff725a] font-extrabold font-serif'>.</span></h2>
+              <h2 className="text-4xl md:ml-16 ml-0 lg:ml-16 2xl:ml-43 font-bold text-white mb-6 break-words">Hello<span className='text-[#ff725a] font-extrabold font-serif'>.</span></h2>
               <div className="relative mb-4 max-w-full">
-                <div className="absolute left-0 -bottom-2 md:bottom-2 lg:bottom-2 w-30 md:w-28 lg:w-28 h-0.5 bg-[#ff725a] ml-35 md:-ml-6 lg:-ml-6"></div>
-                <h1 className="text-2xl lg:text-3xl font-medium mb-6 lg:ml-25 md:ml-25 sm:ml-0 break-words">
+                <div className="absolute left-0 -bottom-2 md:bottom-2 lg:bottom-2 w-30 md:w-28 lg:w-28 2xl:w-55 h-0.5 bg-[#ff725a] ml-35 md:-ml-6 lg:-ml-6"></div>
+                <h1 className="text-2xl lg:text-3xl font-medium mb-6 2xl:ml-52 lg:ml-25 md:ml-25 sm:ml-0 break-words">
                   <span className="text-[#e0e0e0]"> I'm Syed Naveed</span>
                 </h1>
               </div>
-              <h1 className="md:text-4xl lg:text-5xl text-3xl font-bold md:ml-16 lg:ml-16 ml-0 mb-15 break-words">Mern Stack Developer</h1>
+              <h1 className="md:text-4xl lg:text-5xl text-3xl font-bold md:ml-16 lg:ml-16 2xl:ml-43 ml-0 mb-15 break-words">Mern Stack Developer</h1>
             </div>
             
-            <div className={`flex flex-wrap gap-4 transition-all md:ml-16 lg:ml-16 sm:ml-0 justify-center md:justify-start lg:justify-start items-center duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
+            <div className={`flex flex-wrap gap-4 transition-all md:ml-16 2xl:ml-43 lg:ml-16 sm:ml-0 justify-center md:justify-start lg:justify-start items-center duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="btn bg-[#ff725a] rounded-[1px] font-medium border-none text-[#e0e0e0] px-8 md:px-5 lg:px-5 py-7 md:py-2 lg:py-2 hover:scale-105 transition-transform text-sm"

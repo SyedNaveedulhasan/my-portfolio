@@ -3,7 +3,7 @@ import React from 'react';
 
 const ProfileImage = ({ isLoaded, }) => {
   return (
-    <div className={`flex justify-center lg:justify-end mt-2 transition-all mr-0 md:mr-25 lg:mr-25 duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+    <div className={`flex justify-center lg:justify-end mt-2 transition-all mr-0 md:mr-25 lg:mr-25 2xl:mr-55 duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
       <div className="relative w-70 h-70 md:w-80 md:h-80 lg:w-96 lg:h-96">
         
         {/* Left angle bracket - outline only */}
