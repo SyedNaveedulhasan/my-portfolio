@@ -29,18 +29,22 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Chat App',
-      description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB featuring user authentication, payment integration, and inventory management.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express.js'],
-      image: 'https://via.placeholder.com/400x250?text=Chat+App&bg=1a1a2e&color=ffffff',
-      category: 'Full Stack'
+      title: 'Realtime Chat Application',
+      description: 'A full-stack MERN-based real-time chat application built with Socket.io, enabling instant messaging, user authentication, and live conversation updates with a modern responsive interface.',
+      tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Socket.io'],
+      image: '/images/chatapp.png',
+      category: 'Web App / Communication',
+      liveUrl: 'https://mern-chatapp-fbq6.onrender.com',
+      githubUrl: 'https://github.com/SyedNaveedulhasan/MERN-ChatApp.git'
     },
     {
-      title: 'Social Media App',
-      description: 'Real-time social media application with chat functionality, user profiles, and content sharing capabilities.',
-      tech: ['React Native', 'Firebase', 'Socket.io'],
-      image: 'https://via.placeholder.com/400x250?text=Social+App&bg=1a1a2e&color=ffffff',
-      category: 'Mobile App'
+      title: 'Finexa - Personal Finance Tracker',
+      description: 'Finexa is a fintech web application built with React and Firebase that enables users to efficiently manage their personal finances by tracking income, expenses, and savings with real-time analytics and secure authentication.',
+      tech: ['React', 'Firebase',],
+      image: '/images/pft.png',
+      category: 'Fintech / Web App',
+      liveUrl: 'https://finexa-personal-finance-tracker.vercel.app/',
+      githubUrl: 'https://github.com/SyedNaveedulhasan/Finexa-PersonalFinanceTracker.git'
     }
   ];
 
@@ -61,7 +65,7 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => (
-            <ProjectCard 
+            <ProjectCard
               key={index}
               project={project}
               index={index}
