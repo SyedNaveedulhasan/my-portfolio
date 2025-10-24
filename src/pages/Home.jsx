@@ -39,7 +39,7 @@ const Home = ({ isLoaded, scrollToSection }) => {
               <button 
                 className="btn btn-outline border-[#ff725a] border-2 rounded-[2px] font-medium text-[#e0e0e0] hover:bg-[#ff725a] hover:border-[#ff725a] px-5 md:px-4 lg:px-4 py-7 md:py-2 lg:py-2 hover:scale-105 transition-transform text-sm"
               >
-               <a href="/images/Adobe.png" download>Download CV</a> 
+               <a href="/MyResume.pdf" download>Download CV</a> 
               </button>
             </div>
           </div>
