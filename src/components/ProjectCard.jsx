@@ -18,7 +18,7 @@ const ProjectCard = ({ project, index, isVisible }) => {
         <img 
           src={project.image} 
           alt={project.title}
-          className="w-full h-57 object-cover group-hover:scale-110 transition-transform duration-500"
+          className="w-full h-50 2xl:h-55 object-cover transition-transform duration-500 will-change-transform group-hover:scale-[1.03]"
         />
         
         {/* Category Badge */}

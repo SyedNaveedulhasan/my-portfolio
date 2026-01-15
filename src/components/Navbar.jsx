@@ -1,8 +1,9 @@
-// components/Navigation.jsx
-import React from 'react';
-import { BiMenuAltRight } from "react-icons/bi";
+// components/Navbar.jsx
+import React, { useEffect, useState } from 'react';
 
-const Navbar = ({ isLoaded, activeSection, scrollToSection }) => {
+const Navbar = ({ isLoaded, scrollToSection }) => {
+  const [activeSection, setActiveSection] = useState('home');
+
   const navItems = [
     { name: 'Home', id: 'home' },
     { name: 'About', id: 'about' },
@@ -11,6 +12,40 @@ const Navbar = ({ isLoaded, activeSection, scrollToSection }) => {
     { name: 'Contact', id: 'contact' }
   ];
 
+  useEffect(() => {
+    
+    const handleScroll = () => {
+      
+      const scrollY = window.scrollY + 150;
+      
+      // Check each section
+      for (let i = navItems.length - 1; i >= 0; i--) {
+        const section = document.getElementById(navItems[i].id);
+        if (section && scrollY >= section.offsetTop) {
+          setActiveSection(navItems[i].id);
+          return;
+        }
+      }
+    };
+
+    // Add listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Initial call
+    handleScroll();
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array
+
+  const MenuIcon = () => (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  );
+
   return (
     <div className="navbar w-screen py-4 sm:py-0 bg-transparent backdrop-blur-sm fixed top-0 z-50">
       <div className="navbar-start pl-4 md:pl-20 lg:pl-20">
@@ -18,7 +53,6 @@ const Navbar = ({ isLoaded, activeSection, scrollToSection }) => {
           onClick={() => scrollToSection('home')}
           className={`text-xl font-bold text-[#e0e0e0] transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
         > 
-          {/* Show full name on desktop and tablet, short name on mobile */}
           <span className="hidden sm:inline">Syed Naveed Ul Hasan</span>
           <span className="sm:hidden">Syed Naveed</span>
         </button>
@@ -49,7 +83,7 @@ const Navbar = ({ isLoaded, activeSection, scrollToSection }) => {
       <div className="navbar-end lg:hidden pr-0">
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost text-[#e0e0e0] hover:bg-gray-800/30">
-            <BiMenuAltRight className="w-6 h-6" />
+            <MenuIcon />
           </div>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow-xl bg-gray-900/95 backdrop-blur-md rounded-xl w-56 border border-gray-700/50">
             {navItems.map((item) => (

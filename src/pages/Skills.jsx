@@ -34,6 +34,18 @@ const Skills = () => {
       )
     },
     {
+      name: 'Next.js',
+      icon: (
+        <img className="w-16 h-16" src="/images/nextjs.svg" alt="Logo" />
+      )
+    },
+    {
+      name: 'TypeScript',
+      icon: (
+        <img className="w-16 h-16" src="/images/typescript.svg" alt="Logo" />
+      )
+    },
+    {
       name: 'Node.js',
       icon: (
         <img className="w-16 h-16" src="/images/nodejs.svg" alt="Logo" />
@@ -98,7 +110,19 @@ const Skills = () => {
       icon: (
         <img className="w-16 h-16" src="/images/socket.svg" alt="Logo" />
       )
-    }
+    },
+    {
+      name: 'Docker',
+      icon: (
+        <img className="w-19 h-19 pl-2.5 -mb-2.5" src="/images/docker.svg" alt="Logo" />
+      )
+    },
+    {
+      name: 'Neon (PostgreSQL)',
+      icon: (
+        <img className="w-13 h-13 mt-2.5" src="/images/neon.svg" alt="Logo" />
+      )
+    },
   ];
 
   const tools = [
@@ -151,7 +175,7 @@ const Skills = () => {
             <div className="w-16 h-0.5 bg-[#ff725a] mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-8 max-w-6xl mx-auto">
             {technologies.map((tech, index) => (
               <div
                 key={index}

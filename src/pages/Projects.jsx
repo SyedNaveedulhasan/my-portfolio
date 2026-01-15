@@ -38,6 +38,21 @@ const Projects = () => {
       githubUrl: 'https://github.com/SyedNaveedulhasan/MERN-ChatApp.git'
     },
     {
+      title: 'DentWise – AI Dental Assistant',
+      description: 'A full-stack AI-powered SaaS dental platform that provides 24/7 instant AI advice, personalized care recommendations, and smart appointment booking with secure authentication and subscription-based plans.',
+      tech: [
+        'Next.js',
+        'PostgreSQL (Neon)',
+        'Clerk Auth',
+        'Vapi Voice AI Agent',
+        'Resend Emails'
+      ],
+      image: '/images/dentwise.png',
+      category: 'Healthcare / AI SaaS',
+      liveUrl: 'https://dentwise-1.onrender.com',
+      githubUrl: 'https://github.com/SyedNaveedulhasan/DentWise-.git'
+    },
+    {
       title: 'Finexa - Personal Finance Tracker',
       description: 'Finexa is a fintech web application built with React and Firebase that enables users to efficiently manage their personal finances by tracking income, expenses, and savings with real-time analytics and secure authentication.',
       tech: ['React', 'Firebase',],
@@ -63,7 +78,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-8xl mx-auto">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
